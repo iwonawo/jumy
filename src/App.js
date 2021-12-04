@@ -13,8 +13,8 @@ function App() {
     <div className="App">
       <Header />
       <ArtImage />
-      <ProfileCard />
       <SaleInfo />
+      <ProfileCard />
       <TransactionHistory />
       <Footer />
     </div>
