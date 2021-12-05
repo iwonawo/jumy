@@ -58,6 +58,8 @@ h1 {
 }
 h2 {
   font-size: 3rem;
+  line-height: 55.2px;
+  margin: 8px 0 12px;
 }
 h4 {
   font-size: 2rem;
@@ -76,6 +78,14 @@ a {
   margin: 0 auto;
 }
 
+//margins
+.m-t-13 {
+  margin-top: 13px;
+}
+.m-b-4 {
+  margin-bottom: 4px;
+}
+
 // Buttons
 .button {
   background-color: $neutral100;
@@ -89,6 +99,12 @@ a {
     font-size: 1rem;
     padding: 20px 54px;
     margin: 37px 0 148px;
+  }
+
+  &--big {
+    font-size: 1rem;
+    padding: 20px 233px;
+    margin-top: 32px;
   }
 }
 

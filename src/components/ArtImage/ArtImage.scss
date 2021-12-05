@@ -1,6 +1,22 @@
 @import '../../design-tokens/variables.scss';
+@import '../../design-tokens/mixins.scss';
 
 .ArtImage {
   position: relative;
   text-align: center;
+  margin-bottom: 40px;
+  @include atLarge {
+    text-align: end;
+  }
+  img {
+    width: 400px;
+    height: auto;
+    @include atLarge {
+      margin-right: 50px;
+    }
+    @include atXL {
+      width: 668px;
+      margin-right: 80px;
+    }
+  }
 }
