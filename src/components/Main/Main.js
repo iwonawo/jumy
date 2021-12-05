@@ -10,7 +10,7 @@ import ArtImage from '../../components/ArtImage/ArtImage'
 
 function Main(props) {
   return (
-    <div className="Main container">
+    <div className="Main container container--narrow">
       <ArtImage />
       <SaleInfo />
       <ProfileCard />
