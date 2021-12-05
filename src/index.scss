@@ -75,15 +75,8 @@ a {
 
 .container {
   max-width: 1440px;
-  margin: 0 auto;
-}
-
-//margins
-.m-t-13 {
-  margin-top: 13px;
-}
-.m-b-4 {
-  margin-bottom: 4px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 // Buttons
@@ -112,4 +105,48 @@ a {
 .line-separator {
   border: solid $neutral90 2px;
   outline: none;
+}
+
+//
+//UTILITY classes
+//flexbox
+.flex {
+  display: flex;
+  align-items: center;
+  &--sb {
+    justify-content: space-between;
+  }
+}
+
+//margin
+.m-t-13 {
+  margin-top: 13px;
+}
+.m-b-4 {
+  margin-bottom: 4px;
+}
+
+//text
+.about {
+  font-family: $gilroyMedium;
+  color: $neutral70;
+  font-size: 1rem;
+  line-height: 1.4rem;
+  &--salecard {
+    max-width: 452px;
+    margin-bottom: 32px;
+  }
+  &--profilecard {
+    max-width: 333px;
+  }
+}
+.text {
+  font-size: 2rem;
+  line-height: 2.4rem;
+}
+.text-light {
+  font-family: $gilroyMedium;
+  font-size: 1rem;
+  color: $neutral50;
+  margin-top: 13px;
 }

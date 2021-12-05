@@ -15,7 +15,7 @@ function SaleInfo(props) {
           className="logo"
         />
       </div>
-      <p className="about">
+      <p className="about about--salecard">
         Resting refuge translates the symbiotic relationship between colors and
         nature.
       </p>

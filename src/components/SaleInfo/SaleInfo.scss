@@ -11,26 +11,9 @@
     height: auto;
   }
 
-  .flex {
-    display: flex;
-    align-items: center;
-    &--sb {
-      justify-content: space-between;
-    }
-  }
-
   .logo {
     width: 64px;
     height: 64px;
-  }
-
-  .about {
-    font-family: $gilroyMedium;
-    color: $neutral70;
-    max-width: 452px;
-    font-size: 1rem;
-    line-height: 1.4rem;
-    margin-bottom: 32px;
   }
 
   .bid {
@@ -54,18 +37,6 @@
     padding: 4px 6px;
     border-radius: 17px;
     font-size: 0.625rem;
-  }
-
-  .text {
-    font-size: 2rem;
-    line-height: 2.4rem;
-  }
-
-  .text-light {
-    font-family: $gilroyMedium;
-    font-size: 1rem;
-    color: $neutral50;
-    margin-top: 13px;
   }
 
   .time-item:not(last-chiled) {
