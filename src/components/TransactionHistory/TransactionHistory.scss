@@ -26,21 +26,19 @@
     overflow-y: scroll;
     padding-right: 6px;
   }
+  // scroll bar
   /* width */
   ::-webkit-scrollbar {
     width: 4px;
   }
-
   /* Track */
   ::-webkit-scrollbar-track {
-    background: $neutral30;
-  }
-
-  /* Handle */
-  ::-webkit-scrollbar-thumb {
     background: $neutral20;
   }
-
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: $neutral30;
+  }
   /* Handle on hover */
   ::-webkit-scrollbar-thumb:hover {
     background: $neutral50;

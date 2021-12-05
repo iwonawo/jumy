@@ -75,9 +75,17 @@ function ProfileCard(props) {
           </div>
         </div>
         <div className="flex">
-          <a href="/#" className="button">
-            Follow
-          </a>
+          <div className="btn">
+            <span className="btn-circle"></span>
+            <img
+              src={process.env.PUBLIC_URL + '/images/plusIcon.svg'}
+              alt="plus"
+              className="btn-icon"
+            />
+            <button href="/#" className="button">
+              Follow
+            </button>
+          </div>
           <span className="arrow">
             <img
               src={process.env.PUBLIC_URL + '/images/arrowIconGray.svg'}
