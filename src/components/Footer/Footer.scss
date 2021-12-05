@@ -4,4 +4,48 @@
   position: relative;
   background-color: $neutral100;
   text-align: center;
+  padding-top: 120px;
+  padding-bottom: 32px;
+  color: #fff;
+  font-family: $gilroySemiBold;
+
+  .footernav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    padding-left: 40px;
+    padding-right: 40px;
+    &--top {
+      margin: 144px 0 62px;
+    }
+    &--bottom {
+      margin: 36px 0 32px;
+    }
+  }
+
+  .center {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  p {
+    text-align: left;
+    font-family: $gilroyMedium;
+    font-size: 0.875rem;
+    line-height: 1.225rem;
+  }
+  .email {
+    font-size: 1.5rem;
+    letter-spacing: -5%;
+  }
+  .nav {
+    display: flex;
+    li {
+      margin-left: 40px;
+      font-size: 1rem;
+    }
+  }
 }
