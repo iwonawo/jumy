@@ -1,6 +1,48 @@
 @import '../../design-tokens/variables.scss';
+@import '../../design-tokens/mixins.scss';
 
 .TransactionHistory {
   position: relative;
-  text-align: center;
+  text-align: left;
+  padding: 2rem 6px 0 1rem;
+  border: solid 1px $neutral20;
+  @include atLarge {
+    position: absolute;
+    bottom: 0;
+    right: 55px;
+    width: 556px !important;
+    height: 634px !important;
+    height: auto;
+    margin-left: 80px;
+  }
+
+  .title {
+    margin-bottom: 1.5rem;
+    margin-left: 1rem;
+  }
+
+  .bid-wrapper {
+    height: 549px;
+    overflow-y: scroll;
+    padding-right: 6px;
+  }
+  /* width */
+  ::-webkit-scrollbar {
+    width: 4px;
+  }
+
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: $neutral30;
+  }
+
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: $neutral20;
+  }
+
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: $neutral50;
+  }
 }

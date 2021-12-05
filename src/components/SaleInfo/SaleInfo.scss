@@ -1,6 +1,45 @@
 @import '../../design-tokens/variables.scss';
+@import '../../design-tokens/mixins.scss';
 
 .SaleInfo {
   position: relative;
-  text-align: center;
+  text-align: left;
+  margin-top: 40px;
+  margin-bottom: 72px;
+  @include atLarge {
+    width: 556px !important;
+    height: auto;
+  }
+
+  .logo {
+    width: 64px;
+    height: 64px;
+  }
+
+  .bid {
+    margin-bottom: 52px;
+  }
+
+  .current-bid {
+    margin-right: 149px;
+    img {
+      height: 23px;
+      width: auto;
+      margin-right: 13px;
+      transform: translateY(-3px);
+    }
+  }
+
+  .title {
+    text-transform: uppercase;
+    color: #fff;
+    background-color: $neutral100;
+    padding: 4px 6px;
+    border-radius: 17px;
+    font-size: 0.625rem;
+  }
+
+  .time-item:not(last-chiled) {
+    margin-right: 24px;
+  }
 }

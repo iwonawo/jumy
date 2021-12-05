@@ -51,6 +51,14 @@ p {
   margin: 0;
 }
 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: $gilroySemiBold;
+}
 h1 {
   font-size: 3.5rem;
   line-height: 67.2px;
@@ -58,12 +66,16 @@ h1 {
 }
 h2 {
   font-size: 3rem;
+  line-height: 55.2px;
+  margin: 8px 0 12px;
 }
 h4 {
   font-size: 2rem;
 }
 h5 {
   font-size: 1.5rem;
+  line-height: 1.8rem;
+  margin: 0;
 }
 
 a {
@@ -73,7 +85,12 @@ a {
 
 .container {
   max-width: 1440px;
-  margin: 0 auto;
+  margin-left: auto;
+  margin-right: auto;
+
+  &--narrow {
+    max-width: 1360px;
+  }
 }
 
 // Buttons
@@ -90,10 +107,60 @@ a {
     padding: 20px 54px;
     margin: 37px 0 148px;
   }
+
+  &--big {
+    font-size: 1rem;
+    padding: 20px 233px;
+    margin-top: 32px;
+  }
 }
 
 //line separator
 .line-separator {
   border: solid $neutral90 2px;
   outline: none;
+}
+
+//
+//UTILITY classes
+//flexbox
+.flex {
+  display: flex;
+  align-items: center;
+  &--sb {
+    justify-content: space-between;
+  }
+}
+
+//margin
+.m-t-13 {
+  margin-top: 13px;
+}
+.m-b-4 {
+  margin-bottom: 4px;
+}
+
+//text
+.about {
+  font-family: $gilroyMedium;
+  color: $neutral70;
+  font-size: 1rem;
+  line-height: 1.4rem;
+  &--salecard {
+    max-width: 452px;
+    margin-bottom: 32px;
+  }
+  &--profilecard {
+    max-width: 333px;
+  }
+}
+.text {
+  font-size: 2rem;
+  line-height: 2.4rem;
+}
+.text-light {
+  font-family: $gilroyMedium;
+  font-size: 1rem;
+  color: $neutral50;
+  margin-top: 13px;
 }

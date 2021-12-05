@@ -36,7 +36,7 @@ function Footer(props) {
         <a href="/#" className="center">
           <img
             src={process.env.PUBLIC_URL + '/images/arrowIcon.svg'}
-            alt="search"
+            alt="scroll to top"
           />
         </a>
         <ul className="nav">

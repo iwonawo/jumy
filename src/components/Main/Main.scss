@@ -1,0 +1,24 @@
+@import '../../design-tokens/mixins.scss';
+
+.Main {
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: column;
+  margin-top: 48px;
+  margin-bottom: 88px;
+  position: relative;
+  div {
+    width: 100%;
+    height: auto;
+  }
+
+  @include atLarge {
+    flex-wrap: wrap;
+    flex-direction: row;
+    margin-top: 3rem;
+    div {
+      width: auto;
+      height: auto;
+    }
+  }
+}
