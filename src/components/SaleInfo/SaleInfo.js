@@ -50,9 +50,17 @@ function SaleInfo(props) {
           </div>
         </div>
       </div>
-      <a href="/#" className="button button--big">
-        Cancel Sale
-      </a>
+      <div className="btn">
+        <span className="btn-circle"></span>
+        <img
+          src={process.env.PUBLIC_URL + '/images/linesIcon.svg'}
+          alt="icon"
+          className="btn-icon"
+        />
+        <button href="/#" className="button button--big">
+          Cancel Sale
+        </button>
+      </div>
     </div>
   )
 }

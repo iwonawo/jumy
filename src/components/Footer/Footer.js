@@ -7,9 +7,13 @@ function Footer(props) {
   return (
     <footer className="Footer">
       <h1>Are you an artist?</h1>
-      <a href="/#" className="button button--white">
-        Tell us about you
-      </a>
+      <div className="btn">
+        <span className="btn-circle btn-circle--black"></span>
+        <button href="/#" className="button button--white">
+          Tell us about you
+        </button>
+      </div>
+
       <div className="footernav footernav--top">
         <div className="address">
           <p>The Offices 4, One Central</p>

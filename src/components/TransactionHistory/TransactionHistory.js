@@ -15,6 +15,7 @@ function TransactionHistory(props) {
     <div className="TransactionHistory">
       <h5 className="title">History</h5>
       <div className="bid-wrapper">
+        {/* map through data for single Bid Item */}
         {data.map(item => (
           <Bid
             key={item.id}
@@ -24,16 +25,6 @@ function TransactionHistory(props) {
             bid={item.bid}
           />
         ))}
-        {/* <Bid />
-        <Bid />
-        <Bid />
-        <Bid />
-        <Bid />
-        <Bid />
-        <Bid />
-        <Bid />
-        <Bid />
-        <Bid /> */}
       </div>
     </div>
   )

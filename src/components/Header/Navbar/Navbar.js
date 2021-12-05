@@ -32,9 +32,17 @@ function Navbar(props) {
         </div>
       </li>
       <li className="nav-item nav-item--lps">
-        <a href="/#" className="button">
-          Create
-        </a>
+        <div className="btn">
+          <span className="btn-circle"></span>
+          <img
+            src={process.env.PUBLIC_URL + '/images/plusIcon.svg'}
+            alt="plus"
+            className="btn-icon"
+          />
+          <button href="/#" className="button">
+            Create
+          </button>
+        </div>
       </li>
     </ul>
   )
