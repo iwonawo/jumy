@@ -1,4 +1,5 @@
 @import './design-tokens/variables.scss';
+@import './design-tokens/mixins.scss';
 
 //define Gilroy Custom Fonts
 @font-face {
@@ -60,14 +61,31 @@ h6 {
   font-family: $gilroySemiBold;
 }
 h1 {
-  font-size: 3.5rem;
-  line-height: 67.2px;
-  margin: 0 0 37px 0;
+  font-size: 2.625rem;
+  line-height: 3rem;
+  margin: 0 10px 35px 10px;
+  @include atSmall {
+    font-size: 3rem;
+    line-height: 3.45rem;
+  }
+  @include atMedium {
+    font-size: 3.5rem;
+    line-height: 4.2rem;
+    margin: 0 0 37px 0;
+  }
 }
 h2 {
-  font-size: 3rem;
-  line-height: 55.2px;
-  margin: 8px 0 12px;
+  font-size: 2.25rem;
+  line-height: 2.625rem;
+  margin: 8px 5px 12px 0;
+  @include atSmall {
+    font-size: 2.625rem;
+    line-height: 3rem;
+  }
+  @include atMedium {
+    font-size: 3rem;
+    line-height: 3.45rem;
+  }
 }
 h4 {
   font-size: 2rem;
@@ -84,12 +102,36 @@ a {
 }
 
 .container {
-  max-width: 1440px;
+  max-width: 768px;
   margin-left: auto;
   margin-right: auto;
+  padding: 0 1rem;
+  @include atLarge {
+    max-width: 1000px;
+  }
+  @include atXL {
+    max-width: 1440px;
+    padding: 0;
+  }
 
   &--narrow {
-    max-width: 1360px;
+    max-width: 768px;
+    padding: 0 1rem;
+    @include atSmall {
+      padding: 0 2rem;
+    }
+    @include atLarge {
+      padding: 0 1rem;
+      max-width: 1200px;
+    }
+    @include atXL {
+      max-width: 1360px;
+      padding: 0;
+    }
+  }
+  &--wide {
+    padding: 0;
+    max-width: 1800px;
   }
 }
 
@@ -132,7 +174,12 @@ a {
 
   &--big {
     font-size: 1rem;
-    padding: 20px 233px;
+    padding: 20px;
+    width: 100%;
+    @include atLarge {
+      width: auto;
+      padding: 20px 233px;
+    }
   }
 }
 .btn-circle {
@@ -184,6 +231,39 @@ a {
   &--sb {
     justify-content: space-between;
   }
+  &--sb-from-medium {
+    justify-content: space-evenly;
+    @include atMedium {
+      justify-content: space-between;
+    }
+  }
+  &--wrap {
+    flex-wrap: wrap;
+  }
+  &--col-till-small {
+    flex-direction: column;
+    @include atSmall {
+      flex-direction: row;
+    }
+  }
+  &--align-start-till-small {
+    align-items: flex-start;
+    @include atSmall {
+      align-items: center;
+    }
+  }
+  &--col-till-medium {
+    flex-direction: column;
+    @include atMedium {
+      flex-direction: row;
+    }
+  }
+  &--align-start-till-medium {
+    align-items: flex-start;
+    @include atMedium {
+      align-items: center;
+    }
+  }
 }
 
 //margin
@@ -192,6 +272,12 @@ a {
 }
 .m-b-4 {
   margin-bottom: 4px;
+}
+.m-l-for-small {
+  margin-left: 56px;
+  @include atSmall {
+    margin-left: 0;
+  }
 }
 
 //text
@@ -202,19 +288,32 @@ a {
   line-height: 1.4rem;
   &--salecard {
     max-width: 452px;
-    margin-bottom: 32px;
+    margin-bottom: 1.5rem;
+    @include atMedium {
+      margin-bottom: 2rem;
+    }
   }
   &--profilecard {
-    max-width: 333px;
+    max-width: 500px;
+    @include atMedium {
+      max-width: 333px;
+    }
   }
 }
 .text {
-  font-size: 2rem;
-  line-height: 2.4rem;
+  font-size: 1.875rem;
+  line-height: 2rem;
+  @include atMedium {
+    font-size: 2rem;
+    line-height: 2.4rem;
+  }
 }
 .text-light {
   font-family: $gilroyMedium;
-  font-size: 1rem;
+  font-size: 0.875rem;
   color: $neutral50;
   margin-top: 13px;
+  @include atMedium {
+    font-size: 1rem;
+  }
 }

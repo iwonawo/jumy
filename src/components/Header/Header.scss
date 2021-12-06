@@ -1,4 +1,5 @@
 @import '../../design-tokens/variables.scss';
+@import '../../design-tokens/mixins.scss';
 
 .Header {
   position: relative;
@@ -7,7 +8,7 @@
   align-items: center;
   justify-content: center;
   padding: 1rem 0;
-
+  margin-top: 1rem;
   .logo {
     margin-right: 31px;
     max-height: 50px;
@@ -21,8 +22,10 @@
     font-family: $gilroySemiBold;
     display: flex;
     align-items: center;
-    min-width: 645px;
     transition: background-color 0.3s ease-in-out;
+    @include atLarge {
+      min-width: 645px;
+    }
 
     &:hover {
       background-color: #e3e3e3;

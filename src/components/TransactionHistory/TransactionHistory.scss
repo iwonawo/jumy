@@ -4,9 +4,17 @@
 .TransactionHistory {
   position: relative;
   text-align: left;
-  padding: 2rem 6px 0 1rem;
+  padding: 1.5rem 6px 0 6px;
   border: solid 1px $neutral20;
+  margin-top: 30px;
+  @include atMedium {
+    padding: 2rem 6px 0 1rem;
+  }
   @include atLarge {
+    width: 470px !important;
+    margin-top: 0;
+  }
+  @include atXL {
     position: absolute;
     bottom: 0;
     right: 55px;
@@ -25,6 +33,12 @@
     height: 549px;
     overflow-y: scroll;
     padding-right: 6px;
+    @include atLarge {
+      height: 300px;
+    }
+    @include atXL {
+      height: 549px;
+    }
   }
   // scroll bar
   /* width */

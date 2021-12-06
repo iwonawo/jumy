@@ -6,7 +6,7 @@ import './ProfileCard.scss'
 function ProfileCard(props) {
   return (
     <div className="ProfileCard">
-      <div className="artist flex flex--sb">
+      <div className="artist flex flex--sb flex--col-till-medium flex--align-start-till-medium">
         <div className="flex">
           <div className="avatar">
             <div className="img-wrapper">
@@ -31,7 +31,7 @@ function ProfileCard(props) {
           very authentic genr...
         </p>
       </div>
-      <div className="art flex flex--sb">
+      <div className="art flex flex--sb-from-medium flex--wrap">
         <div className="art-img-wrapper">
           <img
             src={process.env.PUBLIC_URL + '/images/jumy-art-1.png'}
@@ -57,7 +57,7 @@ function ProfileCard(props) {
           />
         </div>
       </div>
-      <div className="contact flex flex--sb">
+      <div className="contact flex flex--sb flex--col-till-small">
         <div className="flex">
           <div className="social flex">
             <img
@@ -74,7 +74,7 @@ function ProfileCard(props) {
             <span>@Jumaker</span>
           </div>
         </div>
-        <div className="flex">
+        <div className="flex m-l-for-small">
           <div className="btn">
             <span className="btn-circle"></span>
             <img

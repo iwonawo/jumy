@@ -1,51 +1,97 @@
 @import '../../design-tokens/variables.scss';
+@import '../../design-tokens/mixins.scss';
 
 .Footer {
   position: relative;
   background-color: $neutral100;
   text-align: center;
-  padding-top: 120px;
-  padding-bottom: 32px;
+  padding-top: 80px;
+  padding-bottom: 16px;
   color: #fff;
   font-family: $gilroySemiBold;
+  @include atMedium {
+    padding-top: 120px;
+    padding-bottom: 32px;
+  }
 
   .footernav {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
+    flex-direction: column;
     align-items: center;
     position: relative;
     padding-left: 40px;
     padding-right: 40px;
+    @include atMedium {
+      justify-content: space-between;
+      flex-direction: row;
+    }
     &--top {
-      margin: 144px 0 62px;
+      margin: 80px 0 16px;
+      @include atMedium {
+        margin: 144px 0 62px;
+      }
     }
     &--bottom {
-      margin: 36px 0 32px;
+      flex-direction: column-reverse;
+      margin: 16px 0;
+      @include atMedium {
+        margin: 36px 0 32px;
+        flex-direction: row;
+      }
     }
   }
 
   .center {
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
+    @include atMedium {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+    }
   }
 
+  .address {
+    margin: 1rem 0;
+    @include atMedium {
+      margin: 0;
+    }
+  }
   p {
-    text-align: left;
+    text-align: center;
     font-family: $gilroyMedium;
     font-size: 0.875rem;
     line-height: 1.225rem;
+    @include atMedium {
+      text-align: left;
+    }
+  }
+  .copyrights {
+    margin: 1rem 0 0;
+    @include atMedium {
+      margin: 0;
+    }
   }
   .email {
     font-size: 1.5rem;
     letter-spacing: -5%;
+    margin: 1rem 0;
+    @include atMedium {
+      margin: 0;
+    }
   }
   .nav {
     display: flex;
-    li {
-      margin-left: 40px;
+    margin: 1rem 0;
+    @include atMedium {
+      margin: 0;
+    }
+    li:not(:first-child) {
+      margin-left: 30px;
       font-size: 1rem;
+      @include atLarge {
+        margin-left: 40px;
+      }
     }
   }
 }

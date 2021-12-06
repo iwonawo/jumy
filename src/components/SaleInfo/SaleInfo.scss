@@ -4,9 +4,13 @@
 .SaleInfo {
   position: relative;
   text-align: left;
-  margin-top: 40px;
-  margin-bottom: 72px;
+  margin-top: 20px;
+  margin-bottom: 32px;
   @include atLarge {
+    margin-top: 40px;
+    margin-bottom: 72px;
+  }
+  @include atXL {
     width: 556px !important;
     height: auto;
   }
@@ -17,11 +21,21 @@
   }
 
   .bid {
-    margin-bottom: 52px;
+    margin-bottom: 30px;
+    @include atLarge {
+      margin-bottom: 52px;
+    }
   }
 
   .current-bid {
-    margin-right: 149px;
+    margin-bottom: 20px;
+    @include atSmall {
+      margin-right: 120px;
+      margin-bottom: 0;
+    }
+    @include atMedium {
+      margin-right: 149px;
+    }
     img {
       height: 23px;
       width: auto;
@@ -39,7 +53,13 @@
     font-size: 0.625rem;
   }
 
-  .time-item:not(last-chiled) {
-    margin-right: 24px;
+  .time-item:not(:last-child) {
+    margin-right: 16px;
+    @include atSmall {
+      margin-right: 20px;
+    }
+    @include atMedium {
+      margin-right: 24px;
+    }
   }
 }
