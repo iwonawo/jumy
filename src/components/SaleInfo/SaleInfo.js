@@ -50,7 +50,7 @@ function SaleInfo(props) {
           </div>
         </div>
       </div>
-      <div className="btn">
+      <div className="btn btn--full-width">
         <span className="btn-circle"></span>
         <img
           src={process.env.PUBLIC_URL + '/images/linesIcon.svg'}
