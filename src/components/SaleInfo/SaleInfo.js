@@ -19,7 +19,7 @@ function SaleInfo(props) {
         Resting refuge translates the symbiotic relationship between colors and
         nature.
       </p>
-      <div className="bid flex">
+      <div className="bid flex flex--col-till-small flex--align-start-till-small">
         <div className="current-bid">
           <span className="title">Current Bid</span>
           <div className="flex m-t-13 m-b-4">

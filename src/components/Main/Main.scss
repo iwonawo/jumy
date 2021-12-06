@@ -3,22 +3,19 @@
 .Main {
   display: flex;
   flex-wrap: nowrap;
+  justify-content: space-between;
   flex-direction: column;
   margin-top: 48px;
-  margin-bottom: 88px;
+  margin-bottom: 40px;
   position: relative;
-  div {
-    width: 100%;
-    height: auto;
-  }
 
   @include atLarge {
     flex-wrap: wrap;
     flex-direction: row;
     margin-top: 3rem;
-    div {
-      width: auto;
-      height: auto;
-    }
+    margin-bottom: 88px;
+  }
+  @include atXL {
+    justify-content: flex-start;
   }
 }
