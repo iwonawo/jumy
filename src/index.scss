@@ -139,6 +139,11 @@ a {
 .btn {
   position: relative;
   overflow: hidden;
+  width: auto;
+  display: inline-block;
+  &--full-width {
+    display: block;
+  }
 }
 .button {
   background-color: $neutral100;
@@ -208,12 +213,25 @@ a {
   z-index: 2;
   transition: all 0.2s ease-in-out;
 }
+.btn-arrow {
+  position: absolute;
+  right: 24px;
+  top: 50%;
+  width: 12px;
+  height: 12px;
+  z-index: 2;
+  transform: rotate(90deg) translateX(-50%);
+  transition: right 0.3s ease-in-out;
+}
 .btn:hover .btn-circle {
   transform: translate(-50%, -40%);
   opacity: 0;
 }
 .btn:hover .btn-icon {
   bottom: 40%;
+}
+.btn:hover .btn-arrow {
+  right: 12px;
 }
 
 //line separator

@@ -9,6 +9,11 @@ function Footer(props) {
       <h1>Are you an artist?</h1>
       <div className="btn">
         <span className="btn-circle btn-circle--black"></span>
+        <img
+          src={process.env.PUBLIC_URL + '/images/arrowIcon.svg'}
+          alt="icon"
+          className="btn-arrow"
+        />
         <button href="/#" className="button button--white">
           Tell us about you
         </button>

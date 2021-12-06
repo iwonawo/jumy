@@ -5,10 +5,12 @@
   flex-wrap: nowrap;
   justify-content: space-between;
   flex-direction: column;
-  margin-top: 48px;
+  margin-top: 30px;
   margin-bottom: 40px;
   position: relative;
-
+  @include atMedium {
+    margin-top: 48px;
+  }
   @include atLarge {
     flex-wrap: wrap;
     flex-direction: row;

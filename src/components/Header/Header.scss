@@ -6,56 +6,105 @@
   text-align: center;
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-around;
   padding: 1rem 0;
-  margin-top: 1rem;
+  margin-top: 0.5rem;
+  @include atMedium {
+    margin-top: 1rem;
+  }
+  @include atLarge {
+    justify-content: center;
+  }
   .logo {
-    margin-right: 31px;
+    margin-right: 0.5rem;
     max-height: 50px;
     width: auto;
+    @include atMedium {
+      margin-right: 31px;
+    }
   }
 
   .Search {
+    padding: 0 0.75rem;
     border: 1px solid #e3e3e3;
-    padding: 0 20.5px;
-    font-size: 1rem;
     font-family: $gilroySemiBold;
     display: flex;
     align-items: center;
     transition: background-color 0.3s ease-in-out;
-    @include atLarge {
-      min-width: 645px;
+    @include atSmall {
+      padding: 0 20.5px;
     }
-
     &:hover {
       background-color: #e3e3e3;
     }
-
     input {
-      padding: 14px;
+      position: relative;
+      padding: 14px 6px;
       background-color: transparent;
       outline: none;
       border: none;
       color: $neutral70;
+      font-size: 1rem;
+      cursor: pointer;
+      @include atSmall {
+        min-width: 350px;
+        padding: 14px;
+      }
+      @include atLarge {
+        min-width: 450px;
+      }
+      @include atXL {
+        min-width: 645px;
+      }
     }
     input::placeholder {
       color: $neutral50;
-      font-size: 1rem;
+      font-size: 0.875rem;
+      @include atSmall {
+        font-size: 1rem;
+      }
+    }
+  }
+
+  .menu-icon {
+    transform: rotate(90deg);
+    padding: 0.5rem 0.55rem;
+    font-size: 2rem;
+    color: $neutral100;
+    margin: 0 0 0 0.5rem;
+    outline: none;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    @include atLarge {
+      display: none;
     }
   }
 
   .Navbar {
-    display: flex;
-    align-items: center;
+    display: none;
+    @include atLarge {
+      display: flex;
+      align-items: center;
+    }
 
     li {
       font-size: 1rem;
     }
     .nav-item {
-      padding: 5px 0 5px 40px;
+      padding: 5px 0 5px 30px;
+      @include atXL {
+        padding: 5px 0 5px 40px;
+      }
     }
-    .nav-item--lps {
+    .nav-item--lpm {
       padding-left: 37px;
+      @include atLarge {
+        padding-left: 50px;
+      }
+      @include atXL {
+        padding-left: 37px;
+      }
     }
     .nav-item--lps {
       padding-left: 24px;
@@ -77,6 +126,23 @@
         height: 100%;
         object-fit: cover;
       }
+    }
+  }
+  .Navbar--open {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 80px;
+    left: 0;
+    right: 0;
+    z-index: 100;
+    background-color: #fff;
+    box-shadow: 1px 12px 10px rgba($neutral70, 0.35);
+    padding: 1.75rem 0.5rem;
+
+    .nav-item {
+      padding: 12px 0;
+      width: auto;
     }
   }
 }

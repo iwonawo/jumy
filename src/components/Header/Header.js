@@ -8,7 +8,7 @@ import Search from './Search/Search'
 
 function Header(props) {
   return (
-    <header className="Header container">
+    <header className="Header">
       <img
         src={process.env.PUBLIC_URL + '/images/JumyLogo.svg'}
         alt="Jumy NFTs logo"
